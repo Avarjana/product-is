@@ -251,6 +251,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfGet(String endpointUri) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .contentType(ContentType.JSON)
                 .header(HttpHeaders.ACCEPT, ContentType.JSON)
@@ -270,6 +271,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfGet(String endpointUri, String contentType) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .config(RestAssured.config().encoderConfig(encoderconfig
                         .appendDefaultContentCharsetToContentTypeIfUndefined(false)))
@@ -291,6 +293,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfGet(String endpointUri, Map<String, Object> params) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .contentType(ContentType.JSON)
                 .header(HttpHeaders.ACCEPT, ContentType.JSON)
@@ -311,6 +314,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfGetWithQueryParams(String endpointUri, Map<String, Object> queryParams) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .contentType(ContentType.JSON)
                 .header(HttpHeaders.ACCEPT, ContentType.JSON)
@@ -330,6 +334,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfGetWithoutAuthentication(String endpointUri, String contentType) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given()
                 .config(RestAssured.config().encoderConfig(encoderconfig
                         .appendDefaultContentCharsetToContentTypeIfUndefined(false)))
@@ -351,6 +356,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfPost(String endpointUri, String body) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .contentType(ContentType.JSON)
                 .header(HttpHeaders.ACCEPT, ContentType.JSON)
@@ -374,6 +380,7 @@ public class RESTTestBase extends ISIntegrationTest {
      */
     protected Response getResponseOfPost(String endpointUri, String body, String contentType) {
 
+        System.out.println("Endpoint URI: " + endpointUri);
         return given().auth().preemptive().basic(authenticatingUserName, authenticatingCredential)
                 .config(RestAssured.config().encoderConfig(encoderconfig
                         .appendDefaultContentCharsetToContentTypeIfUndefined(false)))
